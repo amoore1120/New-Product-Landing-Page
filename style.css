@@ -23,7 +23,7 @@ a {
 }
 
 body {
-    background-color: RGB(189,187,215);
+    background-color: RGB(189,187,215, .5);
     color:rgb(112, 128, 144);
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
@@ -102,22 +102,7 @@ p {
 }
 
 
-/*   video   */
-.video-container {
-    width: 100%; 
-    padding-bottom: 35.25%;
-    margin-bottom: 7%;
-    position: relative;
-}
 
-#video {
-    
-    width: 100%;
-    height: 100%;
-    max-height: 1100px;
-}
-
-/*   video   */
 
 
 
@@ -151,6 +136,39 @@ p {
     height: auto;   
    }
 */
+
+/*   video   */
+.video-container {
+
+    margin-bottom: 1rem;
+    margin-bottom: 1rem;
+
+    align-items: center
+    ;
+}
+
+#video {
+    border-width: 15px;
+    border-color:rgb(112, 128, 144);
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    height: 400px;
+    width: 600px;
+}
+
+    /*   video   
+.video-container {
+    width: 100%; 
+    padding-bottom: 35.25%;
+    margin-bottom: 7%;
+    position: relative;
+#video{
+    height: 100%;
+    max-height: 900px;
+}
+*/
+
 
 
 /* SIDEBAR */
@@ -392,3 +410,88 @@ footer p {
 }
 
 /*  end of footer   */
+
+
+
+/* MEDIA  */
+
+
+/*      max-width: 425px      */
+@media only screen and (max-width: 425px){
+    body{
+        background-color: white;
+        align-items: center !important;
+
+    }
+    footer{
+        align-items: center !important;
+    }
+#video {
+
+    display:none;
+}
+.video-container {
+
+    margin-bottom: 1rem;
+
+
+    align-items: center
+    ;
+}
+
+.extra{
+    display: none;
+}
+.extra-images{
+    display:none;
+}
+
+/* images at bottom of main */
+.related-images{
+    display:none;
+}
+.related-posts{
+    grid-column: 1/1 ;
+}
+
+/* .div1 { grid-area: 1 / 2 / 2 / 3; }
+.div2 { grid-area: 2 / 2 / 3 / 3; }
+.div3 { grid-area: 3 / 2 / 4 / 3; }
+.div4 { grid-area: 4 / 2 / 5 / 3; }
+.div5 { grid-area: 5 / 2 / 6 / 3; } */
+
+}
+
+
+
+/*      max-width: medium screens for tablets, ipads, etc ipad mini = 768px - 1024  = ew 2 columns   */
+
+@media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      /* Change to a single column layout */
+    }
+  
+    .sidebar {
+      grid-column: 1;
+      /* Move the sidebar to the first column */
+      grid-row: 2;
+      /* Place it below the main section */
+    }
+  
+    .main {
+      grid-column: 1;
+      /* Move the main section to the first column */
+      grid-row: 1;
+      /* Place it above the sidebar */
+    }
+  }
+
+  
+
+
+
+/*      max-width: full screen for macbooks - full size   */
+/*  a commonly used media query breakpoint for laptops and larger screens is around 1280 pixels or higher   */
+
+
