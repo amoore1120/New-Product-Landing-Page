@@ -3,49 +3,119 @@ yellow  rgb(148,207,215)   dark rgb(219,239,238)    light     rgb(248,243,221)
 pink rgb(148,207,215)   dark pink  rgb(233,73,128)  light pink rgb(252,216,226)   whit pink rgb(251,241,242)
 aqua  rgb(148,207,215)  light rgb(219,239,238)  medium rgb(196,224,225)
 slate grey rgb(112, 128, 144)
-
 */
 
-@import url('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css');
+/*   google font-families
+font-family: 'Anton', sans-serif;
+font-family: 'Tsukimi Rounded', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Ysabeau', sans-serif;
+*/
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
+/*  ***     font sizes      ***
 
+***   REM   ***     1 rem = 16px    0.5rem = 8px    ***
+Rem (short for “root-em”) units dictate an element's font size relative to the size of the root element. By default, most browsers use a font size value of 16px. So, if the root element is 16px, an element with the value 1rem will also equal 16px.
+
+***   EM   ***      1em font size is equal to the current font size     ***
+For example, if the font size of the body text is 16px, then 1em is also 16px. Ems are a scalable unit, meaning that they will change size in proportion to the font size. So, if the font size is increased to 24px, then 1em will also be 24px.
+Ems are a useful unit for setting font sizes because they are responsive. This means that they will automatically adjust to the user's preferred font size settings. This is in contrast to other units, such as pixels, which will always be the same size regardless of the user's font size settings.
+Ems can also be used to set other properties, such as margins and paddings. 
+For example, the following CSS rule will set the margin of the body text to 1em:
+
+body {
+  margin: 1em;
+} 
+
+This will set the margin of the body text to the same size as the font size.
+Ems are a versatile unit that can be used to set a variety of properties. They are a good choice for setting font sizes because they are responsive and scalable.
+
+***     EM  -VS-    REM     ***
+Rem and em are both relative units of length in CSS. They are both scalable, meaning that they will change size in proportion to the parent element. However, there is a key difference between the two units: rem is relative to the root element, while em is relative to the parent element. For example, if the font size of the root element is 16px, then 1rem will also be 16px. However, if the font size of the parent element is 24px, then 1em will be 24px.
+
+    In general: 
+    - rem is a good choice for setting font sizes, because it will ensure that the font size is responsive to the user's preferences. 
+    - Em is a good choice for setting other properties, such as margins and paddings, because it allows you to set the size of the property relative to the parent element.
+
+ ***     EM    -VS-    REM    -VS-    PX     ***  
+em
+A multiple of the font-size of the element it is used on. For example, if the font-size of a container is 2rem, then 1em is 32px inside the container.
+
+rem
+A multiple of the root font-size of your browser. For example, if the root-font size is 16px, then 1rem is 16px.
+
+px
+A fixed-size unit used for small elements like borders or shadows.
+
+em and rem
+Scalable units that meet web accessibility standards. They are better than px because they scale better and meet web accessibility standards.
+
+px
+An absolute measurement that hardcodes the font-size for all users. The user can't change the value.
+
+Here are some general guidelines for using em, rem, and px:
+    - Use px for small, fixed-size elements like borders or shadows.
+    - Use em for typography and other scalable elements that need to change size relative to their parent element.
+    - Use rem for scalable typography and responsive layouts that need to change size relative to the root element.
+*/
+
+
+
+
+
+/* global styles for all elements on the page */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   
 }
 
+/* anchor (<a>) element */
 a {
     color: inherit;
+    /* color: inherit: property sets the text color of the anchor element to inherit the color of its parent element. anchor element will have the same text color as its parent element, allowing it to blend seamlessly with the surrounding content.
+    text-decoration: none;*/
+
     text-decoration: none;
+    /* property removes the default underline decoration from the anchor element's text. By setting it to none, the anchor text will appear without any underlines, cleaner, streamline appearance */
 }
+
 
 body {
     background-color: rgb(112, 128, 144, .3);
-    color: rgb(112, 128, 144) ;
-    font-family: "Montserrat", sans-serif;
+    /* side colors */
+    /*background-image: url("#"); 
+    background-repeat: ;   */
+    /*(use to add decorative design on top of background color to stylize sides to match promo ex: confetti or grad hats/diplomas for graduation promo)*/
+    color: rgb(112, 128, 144);
+    /* color of the text content inside the element */
+    font-family: 'Ysabeau', sans-serif;
+    /* specific font name, and if that font is not available, it falls back to a generic sans-serif font */
     font-weight: 400;
-    
 }
-/*  background-image:url("assets\img\watercolor-rainbow-background.avif");
-    background-repeat: repeat;
-    */
 
+/*  text   */
 p {
     font-size: 1.5rem;
+    /* equivalent to 24 px at full size */
 }
 
-
+/*  container element - holds header + sidebar + main + footer - sets padding for body background color and design   */
 .container {
     max-width: 1250px;
+    /*    should min-width be set for responsiveness ex: 300px  */
     margin: 0 auto;
+    /*  centers the container horizontally, left & right margins to auto, the top & bottom margins to 0 */
     padding: 0 60px;
+    /*  sets the padding of container: 0px top & bottom, 60 px left & right. Padding creates the space between the content &border for body background color & design (2 side columns  */
     display: grid;
     grid-template-columns: 0.4fr 0.3fr 0.3fr;
+    /* defines the columns of the grid: 0.4fr, 0.3fr, and 0.3fr = fraction of the available space each column should occupy. In this case, the first column will take 40% of the available space, and the second and third columns will each take 30% of the available space. */
+
     grid-column-gap: 10px;
-    grid-row-gap: 15px;
+    /* creates space between the grid items in the horizontal direction */
+    grid-row-gap: 18px;
+    /* creates space between the grid items in the vertical direction */
     background-color: #fff;
 }
 
@@ -53,10 +123,12 @@ p {
 
 .header {
     grid-column: 1 / 4;
+    /* sets the header element to span from the first column to the fourth column in the grid layout */
     grid-row: 1 / 2;
     color: #9f9c9c;
     text-transform: uppercase;
     border-bottom: 2px solid #b0e0ea;
+    /* aqua border line -  horizontal line below the header  */
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
@@ -64,7 +136,7 @@ p {
 }
 
 
-
+/* header nav links */
 .header nav ul {
     display: flex;
     /*     align-items: baseline; */
@@ -72,9 +144,9 @@ p {
 }
 
 .header nav li {
-    margin-right: 15px;
+    margin-right: 2rem;
+    /* adds a right margin to each list item (li) inside the navigation links, creates spacing between each navigation link item  */
 }
-
 
 
 /* Logo */
@@ -84,12 +156,16 @@ p {
 }
 
 #header-img {
-    max-width: 150px;
-    max-height: 80px;
+    max-width: 9.375rem;
+    /* 150px / 16px = 9.375rem */
+    max-height: 5rem;
+    /* 80px / 16px = 5rem */
+    ;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    padding: 5px;
+    padding: 0.3125rem;
+    /* 5px / 16px = 0.3125rem */
 
 }
 
@@ -101,6 +177,24 @@ p {
 
 /* HERO - CONTACT / ORDER */
 #hero {
+    font-size: 1rem;
+    /* 16px / 16px = 1rem */
+    line-height: 2rem;
+    /* 2rem looks better! 25px / 16px = 1.5625rem */
+    margin-bottom: 0.625rem;
+    /* 10px / 16px = 0.625rem */
+    padding: 1.25rem;
+    /* 20px / 16px = 1.25rem */
+    color: rgb(112, 128, 144);
+    grid-column: 1 / 2;
+    grid-row-start: 2 / 3;
+    background-color: rgb(252, 216, 226);
+    min-height: 18.75rem;
+    /* 300px / 16px = 18.75rem */
+}
+
+/* old
+#hero {
     font-size: 16px;
     line-height: 25px;
     margin-bottom: 10px;
@@ -108,18 +202,10 @@ p {
     color: rgb(112, 128, 144);
     grid-column: 1 / 2;
     grid-row-start: 2 / 3;
-    background-color:rgb(252, 216, 226) ;
+    background-color: rgb(252, 216, 226);
     min-height: 300px;
-    /* background-image: "assets/img/shirts.png";
+}*/
 
-    */
-}
-
-
-.hero h2 {
-
-    text-align: center;
-}
 
 button {
     border: none;
@@ -134,8 +220,6 @@ button {
 }
 
 
-
-
 /* hero box background image 
 .hero-unit img {
     width: 100%; 
@@ -143,27 +227,44 @@ button {
    }
 */
 
+
 /*   video   */
 .video-container {
+    margin-bottom: 1rem;
+    align-items: center;
+}
 
+#video {
+    border-width: 0.9375rem;
+    /* 15px / 16px = 0.9375rem */
+    border-color: rgb(112, 128, 144);
+    align-items: center;
+    align-content: center;
+    height: 25rem;
+    /* 400px / 16px = 25rem */
+    width: 37.5rem;
+    /* 600px / 16px = 37.5rem */
+}
+
+
+/*   old code
+.video-container {
     margin-bottom: 1rem;
     margin-bottom: 1rem;
-
-    align-items: center
-    ;
+    align-items: center;
 }
 
 #video {
     border-width: 15px;
-    border-color:rgb(112, 128, 144);
+    border-color: rgb(112, 128, 144);
     align-items: center;
     align-content: center;
     height: 100%;
     height: 400px;
     width: 600px;
-}
+} */
 
-    /*   video   
+/*   video   
 .video-container {
     width: 100%; 
     padding-bottom: 35.25%;
@@ -184,7 +285,7 @@ button {
     padding: 20px;
     border-top: 3px solid #693f7e;
     border-bottom: 3px solid #693f7e;
-    background-color:#d5c9e2 ;
+    background-color: #d5c9e2;
 }
 
 .sidebar h3 {
@@ -193,31 +294,32 @@ button {
 
 /* sidebar R\fb related post */
 .sidebar ul {
-    padding-left: 10px;
+    padding-left: 0.625rem;
+    /* 10px / 16px = 0.625rem */
     margin-top: 1rem;
-    font-size: .75rem;
+    font-size: 1rem;
 }
+
 /*  sidebar bullet list - related content    */
 .sidebar ul>li {
-    padding: .25rem 0;
-    font-size: 14px;
-    letter-spacing: 1px;
-    line-height: 20px;
+    padding: 0.15625rem 0;
+    /* 2.5px / 16px = 0.15625rem */
+    font-size: 0.875rem;
+    /* 14px / 16px = 0.875rem */
+    letter-spacing: 0.0625rem;
+    /* 1px / 16px = 0.0625rem */
+    line-height: 1.25rem;
+    /* 20px / 16px = 1.25rem */
 
-    padding-left: 5px;
+    padding-left: 0.3125rem;
+    /* 5px / 16px = 0.3125rem */
 
     color: rgb(112, 128, 144);
-
-
-
 }
 
 .sidebar img {
     max-width: 100%;
 }
-
-
-
 
 /* end sidebar */
 
@@ -225,8 +327,7 @@ button {
 
 
 
-
-
+/*  main    */
 .main {
     grid-column: 2 / 4;
     grid-row: 2 / 4;
@@ -234,20 +335,29 @@ button {
     /*   min-height: 500px; */
 }
 
+/*  title & promo tag - cooresponds with header   */
 .main h1 {
-    font-size: 32px;
+    font-family: 'Tsukimi Rounded', sans-serif;
+    font-size: 2rem;
+    /* 32px / 16px = 2rem */
     margin-bottom: 2rem;
     margin-top: 2rem;
     color: #50c6db;
     text-align: center;
 }
+
+
+/*  main features - bold text    */
 .main h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
+    /* 24px / 16px = 1.5rem */
     margin-bottom: 1rem;
     color: #50c6db;
     text-align: center;
 }
 
+
+/*  main features - feature detail info    */
 .main p {
     font-size: 1rem;
     margin-bottom: .75rem;
@@ -260,13 +370,13 @@ button {
     align-items: center;
     width: 100%;
     background-color: white;
-    padding: 30px;
-
+    padding: 2rem;
+    /* Adjust the value as needed using rem or em units */
 }
+
 
 /* features grid */
 .grid {
-    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
@@ -274,6 +384,13 @@ button {
     grid-template-columns: repeat(2, 1fr);
     /* Two columns with equal width */
     gap: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    /* Media query for screens with a maximum width of 768px (such as tablets) */
+    .grid {
+        flex-direction: column;
+    }
 }
 
 .grid-item {
@@ -319,7 +436,6 @@ button {
 
 .extra-images .icon {
     flex: 1 1 90px;
-
 }
 
 .extra-images .icon img {
@@ -346,16 +462,14 @@ border: 2px solid rgb(219, 239, 238); */
 
 }
 
-*/
-
-/*
-
+/* button for 3 boxes for links to sizing, colors, etc (links to full webpage content or facebook post with sizing, colors, ordering?)
 .extra button {
   background-color: white;
   border: 2px solid #50c6db;
   color: #50c6db;
   padding: .5rem;
 }*/
+
 .content-block-info {
     flex: 0 1 calc(33% - .5rem);
 }
@@ -402,28 +516,79 @@ border: 2px solid rgb(219, 239, 238); */
 
 
 
-/*   footer   */
+
+/* footer */
 footer {
     grid-column: 1 / 4;
     grid-row: 6 / 7;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 2rem 0;
     background-color: #50c6db;
-    line-height: 40px;
+    line-height: 2.5rem;
 }
 
 footer h2 {
     color: rgb(233, 73, 128);
-    padding: 10px;
+    padding: 1rem;
 }
-
 
 footer p {
     color: #434344;
-    font-size: 12px;
-    padding: 10px;
+    font-size: 0.75rem;
+    padding: 1rem;
 }
+
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+
+}
+
+.contact-item i {
+    margin-right: 0.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    margin-top: 1rem;
+}
+
+.footer-nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-nav li {
+    margin: 0 0.5rem;
+}
+
 
 /*  end of footer   */
 
@@ -433,44 +598,48 @@ footer p {
 
 
 /*      max-width: 425px      */
-@media only screen and (max-width: 425px){
-    body{
+@media only screen and (max-width: 425px) {
+    body {
         background-color: white;
         align-items: center !important;
 
     }
-    footer{
+
+    footer {
         align-items: center !important;
     }
-#video {
 
-    display:none;
-}
-.video-container {
+    #video {
 
-    margin-bottom: 1rem;
+        display: none;
+    }
+
+    .video-container {
+
+        margin-bottom: 1rem;
 
 
-    align-items: center
-    ;
-}
+        align-items: center;
+    }
 
-.extra{
-    display: none;
-}
-.extra-images{
-    display:none;
-}
+    .extra {
+        display: none;
+    }
 
-/* images at bottom of main */
-.related-images{
-    display:none;
-}
-.related-posts{
-    grid-column: 1/1 ;
-}
+    .extra-images {
+        display: none;
+    }
 
-/* .div1 { grid-area: 1 / 2 / 2 / 3; }
+    /* images at bottom of main */
+    .related-images {
+        display: none;
+    }
+
+    .related-posts {
+        grid-column: 1/1;
+    }
+
+    /* .div1 { grid-area: 1 / 2 / 2 / 3; }
 .div2 { grid-area: 2 / 2 / 3 / 3; }
 .div3 { grid-area: 3 / 2 / 4 / 3; }
 .div4 { grid-area: 4 / 2 / 5 / 3; }
@@ -484,30 +653,28 @@ footer p {
 
 @media (max-width: 768px) {
     .grid-container {
-      grid-template-columns: 1fr;
-      /* Change to a single column layout */
+        grid-template-columns: 1fr;
+        /* Change to a single column layout */
     }
-  
-    .sidebar {
-      grid-column: 1;
-      /* Move the sidebar to the first column */
-      grid-row: 2;
-      /* Place it below the main section */
-    }
-  
-    .main {
-      grid-column: 1;
-      /* Move the main section to the first column */
-      grid-row: 1;
-      /* Place it above the sidebar */
-    }
-  }
 
-  
+    .sidebar {
+        grid-column: 1;
+        /* Move the sidebar to the first column */
+        grid-row: 2;
+        /* Place it below the main section */
+    }
+
+    .main {
+        grid-column: 1;
+        /* Move the main section to the first column */
+        grid-row: 1;
+        /* Place it above the sidebar */
+    }
+}
+
+
 
 
 
 /*      max-width: full screen for macbooks - full size   */
 /*  a commonly used media query breakpoint for laptops and larger screens is around 1280 pixels or higher   */
-
-

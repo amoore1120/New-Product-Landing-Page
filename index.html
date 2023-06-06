@@ -17,29 +17,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2family=Anton&family=Kaushan+Script&family=Luckiest+Guy&family=Unbounded:wght@200;400;600;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Tsukimi+Rounded:wght@300;400;500;600;700&family=Ubuntu:ital,wght@0,300;1,300&family=Ysabeau:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ysabeau:ital,wght@0,200;0,300;0,500;1,300;1,400&display=swap"
-        rel="stylesheet">
+
 </head>
 
 <body>
+
     <!--   facebook plugin script   -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0"
         nonce="w1QCGjct">
         </script>
 
-
+    <!--   content container - header + sidebar + main  + footer -->
+    <!--   gives border on sides to change the color and background image with each promo - ex: lavendar grey background color with confetti background image for graduation    -->
     <div class="container">
-        <div class="header">
-            <p class="logo"><a href="#"> <img id="header-img" alt="logo" max-height="80px"
+
+        <!--   header - currently not sticky or floating. stays at top of the page, doesn't scroll   -->
+        <div class="header" id="header">
+            <p class="logo"><a href="#"> <img id="header-img" alt="Got It! logo" max-height="80px"
                         src="assets/img/logo2.jpg"></a></p>
             <nav>
                 <ul>
                     <li><a href="#features">Features</a></li>
-                    <li><a href="#options">Options</a></li>
-                    <li><a href="#order">Order</a></li>
+                    <li><a href="#order">Order/Request Info</a></li>
+                    <li><a href="#social-media">Facebook</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -53,9 +56,12 @@
 
         <div id="hero">
 
+            <!--   contact form     -->
+            <!-- free form and email receipt of submissions  -  https://app.getform.io/forms   -->
+
             <form name="contactform" form action="https://getform.io/f/d48e4eb7-edfd-4085-91e0-b4091e03f25f"
                 method="POST">
-                <p id="us">Contact Us: </p>
+                <p id="us">Order/ Request More Info: </p>
                 <div id="order">
                     <input type="name" name="" placeholder="Your Name" required>
                     <input type="tel" name="" placeholder="Your Phone Number" required>
@@ -78,13 +84,13 @@
                     <!-- add hidden Honeypot input to prevent spams -->
                     <input type="hidden" name="_gotcha" style="display:none !important">
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit" id="contact-button">Submit</button>
                 <br>
             </form>
             <br>
 
             </section>
-        </div>
+        </div> <!--   /  END OF HERO SECTION   -->
 
 
 
@@ -93,10 +99,12 @@
 
 
 
-        <!--   SIDE BAR   -->
+        <!--   SIDE BAR :  SOCIAL MEDIA EMBED (facebook, insta, youtube, tiktok)     +       RELATED POST     -->
+
         <aside class="sidebar">
 
-            <div class="facebook-container">
+            <!--   FACEBOOK EMBED   -->
+            <div class="facebook-container" id="social-media">
                 <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100091246779442"
                     data-tabs="timeline" data-width="500px" data-height="" data-small-header="false"
                     data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
@@ -105,51 +113,59 @@
                         <a href="https://www.facebook.com/profile.php?id=100091246779442">Got it customized?</a>
                     </blockquote>
                 </div>
-            </div>
+            </div> <!--   /  END OF FACEBOOK  -->
 
 
-
-
-
+            <!--   RECENT POST   -->
+            <!--   facebook recent facebook post related to promo item   -->
             <h3>Recent Posts</h3>
             <ul>
                 <li><a href="https://www.facebook.com/groups/617690660186718/permalink/654499179839199/">Walnut
                         Hills</a></li>
-                <li><a href="https://www.facebook.com/groups/617690660186718/permalink/652183703404080/">Matching
-                        mom &
+                <li><a href="https://www.facebook.com/groups/617690660186718/permalink/652183703404080/">Matching mom &
                         daughter set</a></li>
                 <li><a href="https://www.facebook.com/groups/617690660186718/permalink/639929214629529/">Grad Family
                         T-shirt set</a></li>
                 <li><a href="https://www.facebook.com/groups/617690660186718/permalink/652405126715271/">Senior
                         Outfits</a></li>
-                <li><a href="https://www.facebook.com/groups/617690660186718/permalink/630271862261931/">Senior
-                        sweater
+                <li><a href="https://www.facebook.com/groups/617690660186718/permalink/630271862261931/">Senior sweater
                         & Family support shirts</a></li>
             </ul>
-        </aside>
-        <!--   / end sidebar   -->
+
+        </aside> <!--   / END OF SIDEBAR   -->
 
 
 
 
-        <!--   MAIN BODY   -->
+        <!--   MAIN BODY :      TITLE OF PROMO   +  MEDIA   +   PROMO TAG    +   FEATURES   +   EXTRAS   -->
         <div class="main">
 
+            <!--  VIDEO/PHOTO FEATURE :     -->
             <h1>Custom Couture for Grads:</h1>
+
+            <!--   MEDIA CONTAINER FOR VIDEO OR PHOTO   -->
             <div class="video-container container">
                 <div class="row justify-content-center">
                     <div class="col ml-5">
+
+
                         <iframe id="video" src="assets/GotIt_AprilSale.mp4" width="400" height="800px"></iframe>
-                        <!--     <img src="#">  if switching from video to image -->
+                        <!-- inline style will override css -->
+
+                        <!--   if switching from video to image:
+                              <img src="#">     OR  clickable photo
+                              <a href="https://www.example.com" target="_blank"><img src="path/to/image.jpg" alt="image description"></a>  
+                         -->
+
                     </div>
                 </div>
-            </div>
+            </div> <!--   /  END OF MEDIA CONTAINER   -->
 
 
-
+            <!--   PROMO / MARKETING TAG   -->
             <h1>Express Yourself and Embrace Your Success with a Personalized Outfit</h1>
 
-            <!--   features section   -->
+            <!--   FEATURES SECTION : features of promo item -->
             <div class="grid" id="features">
                 <div class="grid-item">
                     <div class="icon">
@@ -195,34 +211,30 @@
                 </div>
 
             </div>
-            </section>
-
-
+            </section> <!--   /  END OF FEATURES   -->
         </div>
+
+        <!--   EXTRA   -->
+        <!--    Options:    1. set up as 1 image (promo tag ex. stand out made in canva) 
+                            2. row of 3 columns : 3 small containers with links to info -example- a. page for adult clothing options size & color  B. kids options & sizing  c. vinyl colors for each type (reg, glitter, holographic)   -->
 
         <div class="extra">
             <div class="extra-images">
                 <div class="icon" id="stand-out"><img src="assets/img/stand out.png"></div>
             </div>
 
-
-            <div class="extra-images">
-                <div class="icon"><img src="assets/img/gildan-sizes_orig.jpg"></div>
-            </div>
-
+            <!--  <div class="extra-images">
+                <div class="icon"><img src="assets/img/gildan-sizes_orig.jpg"></div>-->
 
         </div>
 
 
 
-        <!--   related images   -->
+
+        <!--   RELATED SECTION : IMAGE CONTAINER + TEXT BOX     -->
+
+        <!--    photo grid :   square images = 2 ROWS 3 COLUMNS : portrait 4:3 sizing(tall) images =  1 row 3 columns  -->
         <div class="related-images">
-
-            <div class="icon"><img src="assets/img/vivyl_solid3_edited3x4.jpg"></div>
-
-            <div class="icon"><img src="assets/img/holographic_edited3x4.jpg"></div>
-
-            <div class="icon"><img src="assets/img/glittervinyl_edited3x4.jpg"></div>
 
             <div class="icon"><img src="assets/img/grad outfit_2pose.png"></div>
 
@@ -230,23 +242,29 @@
 
             <div class="icon"><img src="assets/img/preK_grad_2piece_edited.jpg"></div>
 
+            <!-- 2ND ROW FOR SQUARE PHOTOS - works with another row of portrait oriented photos but sometimes feels crowded. less is better oftentimes. note to self - keep it simple stupid. 
+
+            <div class="icon"><img src="assets/img/vivyl_solid3_edited3x4.jpg"></div>
+
+            <div class="icon"><img src="assets/img/holographic_edited3x4.jpg"></div>
+
+            <div class="icon"><img src="assets/img/glittervinyl_edited3x4.jpg"></div>
+            -->
         </div>
 
 
 
-        <!--   related post    -->
+        <!--   RELATED POST : TEXT BOX COORESPONDS TO RELATED IMAGES     -->
+
         <div class="related-posts" id="options">
-            <h4>Ordering Info:</h4>
+            <h4>Order Info:</h4>
 
             <h5>please include the following with your order information </h5>
 
             <br>
             <!--   unordered list - also use for links to external pages once a full webpage? couldn't decide on layout   -->
             <ul>
-                <li><a href="#">color & size for top</a></li>
-                <br>
-
-                <li><a href="#">color & size for skirt/shorts</a></li>
+                <li><a href="#">color & size for each item</a></li>
                 <br>
 
                 <li><a href="#">print colors: 1 sparkle color, 1 solid color</a></li>
@@ -255,13 +273,20 @@
                 <li><a href="#">personal info for the item: name, grade, year</a></li>
                 <br>
 
-                <li><a href="#">size: be sure to include if the size is infant, toddler, adult</a></li>
-                <br>
 
-                <li><a href="#">(please note the top & bottom are from different manufacturers. Exact color matching
-                        isn't always possible. I will do my best to match as closely as possible.)</a></li>
+
+                <!-- extra lines when using 2 rows 
+                    <li><a href="#">color & size for skirt/shorts</a></li>
+                    <br>
+
+                    <li><a href="#">size: be sure to include if the size is infant, toddler, adult</a></li>
+             
+                     <br>
+                     <li><a href="#">(please note the top & bottom are from different manufacturers. Exact color matching isn't always possible. I will do my best to match as closely as possible.)</a></li>
                 <br>
+                -->
             </ul>
+
 
         </div>
 
@@ -270,36 +295,71 @@
 
         <!--   FOOTER  -->
         <footer>
-
+            <!--   CONTACT METHODS  -->
             <h3>Got It! Customized by KayKay</h3>
-            <div class="contact-card" id="contact">
-                <h2>Contact KayKay via:</h2>
-                <div class="contact-item">
 
-                    <i class="fas fa-phone fa-lg purple-icon"></i>
-                    <a href="tel:+15136924115">Phone: (513) 692-4115</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope fa-lg purple-icon"></i>
-                    <a href="mailto:kaykay.mcglone@gmail.com">Email: kaykay.mcglone@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-facebook-messenger fa-lg purple-icon"></i>
-                    <!-- replace href with kk fb page id -->
-                    <a href="https://m.me/your_facebook_page_id">Messenger: Send a Message</a>
-                </div>
-            </div>
+            <div class="footer-grid">
+                <h2>Contact KayKay:</h2>
+                <div class="contact-grid" id="contact">
+
+                    <!--   contact :    phone    -->
+                    <!--   waiting for google voice #    -->
+                    <div class="contact-item">
+                        <i class="fas fa-phone fa-lg"></i>
+                        <a href="tel:+15136924115"> &nbsp; Phone <!-- : (513) 692-4115 --> </a>
+                    </div>
+
+                    <!--    sms: protocol - text on mobile  -->
+                    <!--   link will open the phone's default text messaging app with a new message already addressed to the specified phone number. When the user clicks on the link, it will open their text messaging app with the recipient pre-filled. Note: behavior may vary depending on the device and operating system.   -->
+                    <div class="contact-item">
+                        <i class="fa-solid fa-message fa-lg"></i>
+                        <a href="sms:+15136924115"> &nbsp; Text <!-- : (513) 692-4115 --></a>
+                    </div>
+
+
+                    <!--   contact :    email    -->
+                    <div class="contact-item">
+                        <i class="fas fa-envelope fa-lg purple-icon"></i>
+                        <a href="mailto:kaykay.mcglone@gmail.com"> &nbsp; Email <!-- kaykay.mcglone@gmail.com --> </a>
+                    </div>
+
+                    <!--   contact :    facebook messenger    -->
+                    <div class="contact-item">
+                        <i class="fab fa-facebook-messenger fa-lg"></i>
+                        <!-- replace href with Got It! fb page or group id - currently set to her personal fb - sent her info on how to get messenger link for business page/group ... waiting... still waiting... shocking... still waiting  -->
+                        <a href="https://m.me/your_facebook_page_id"> &nbsp; Messenger <!-- : Send a Message --> </a>
+                    </div>
+
+                </div><!--   /  END OF CONTACT GRID   -->
+
+                <nav class="footer-nav">
+                    <ul>
+
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#order">Order/Request Info</a></li>
+                        <li><a href="#social-media">Facebook</a></li>
+                    </ul>
+                </nav>
 
 
 
+            </div> <!--   /  END OF FOOTER GRID   -->
+
+
+
+
+            <!--    COPYRIGHT INFO  - owner of company + info on webpage design  -->
+            <!--   made names hyperlinks - drive traffic to main site & promote webpage designer    -->
             <p>Copyright &copy;<a href="https://www.facebook.com/profile.php?id=100091246779442" target="_blank">KayKay
                     McGlone</a>&nbsp;&nbsp;&nbsp; Website Design &copy;<a
                     href="https://amoore1120.github.io/New_personalPortfolio_bootstrap/" target="_blank">Amanda
                     Moore</a>2023-2024 &nbsp;&nbsp;&nbsp; All rights reserved.</p>
-        </footer>
-    </div>
-    </div>
-</body>
+
+        </footer> <!--   /  END OF FOOTER    -->
+
+    </div> <!--   /  END OF    MAIN SECTION   -->
+
+</body> <!--   / END OF BODY   -->
 
 </html>
 
@@ -345,8 +405,7 @@
 
 
 
-<!--    RAW FORM INFO -  getgorm.io  -->
-
+<!--    RAW FORM  -  getgorm.io  -->
 
 <!--        input text box -   -->
 <!--
@@ -358,33 +417,29 @@
 -->
 
 
-
-    <!-- add hidden Honeypot input to prevent spams -->
-    <!--
+<!-- add hidden Honeypot input to prevent spams -->
+<!--
     <input type="hidden" name="_gotcha" style="display:none !important">
     -->
 
 
-
-    <!-- checkbox handle -->
-    <!--
+<!-- checkbox handle -->
+<!--
     <input type="checkbox" name="subscribe" value="yes" checked>
     <input type="hidden" name="subscribe" value="no">
     -->
 
 
-
-    <!-- radio button handle -->
-    <!--
+<!-- radio button handle -->
+<!--
     <input type="radio" name="gender" value="male" checked>
     <input type="radio" name="gender" value="female">
     <input type="radio" name="gender" value="other">
     -->
 
 
-
-    <!-- select field handle -->
-    <!--
+<!-- select field handle -->
+<!--
     <select name="work-experience">
         <option value="one-year">0-1 years</option>
         <option value="one-five-years">1-5 years</option>
@@ -393,6 +448,3 @@
 </form>
 
 -->
-
-
-
