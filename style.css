@@ -23,8 +23,8 @@ a {
 }
 
 body {
-    background-color: RGB(189,187,215, .5);
-    color:rgb(112, 128, 144);
+    background-color: rgb(112, 128, 144, .3);
+    color: rgb(112, 128, 144) ;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     
@@ -75,15 +75,7 @@ p {
     margin-right: 15px;
 }
 
-.header button {
-    border: none;
-    padding: 8px 25px;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 1.25rem;
-    background-color: rgb(148, 207, 215);
-}
+
 
 /* Logo */
 .logo {
@@ -107,21 +99,20 @@ p {
 
 
 
-/* Hero/ email box */
-.hero {
+/* HERO - CONTACT / ORDER */
+#hero {
     font-size: 16px;
     line-height: 25px;
     margin-bottom: 10px;
     padding: 20px;
     color: rgb(112, 128, 144);
-
     grid-column: 1 / 2;
     grid-row-start: 2 / 3;
-    background-color: #d5c9e2;
+    background-color:rgb(252, 216, 226) ;
     min-height: 300px;
-    background-image: "assets/img/shirts.png";
+    /* background-image: "assets/img/shirts.png";
 
-
+    */
 }
 
 
@@ -129,6 +120,21 @@ p {
 
     text-align: center;
 }
+
+button {
+    border: none;
+    padding: 8px 25px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 1.25rem;
+    background-color: rgb(148, 207, 215);
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+
 
 /* hero box background image 
 .hero-unit img {
@@ -177,7 +183,8 @@ p {
     grid-row: 3 / 5;
     padding: 20px;
     border-top: 3px solid #693f7e;
-    background-color: rgb(252, 216, 226);
+    border-bottom: 3px solid #693f7e;
+    background-color:#d5c9e2 ;
 }
 
 .sidebar h3 {
@@ -227,8 +234,15 @@ p {
     /*   min-height: 500px; */
 }
 
-.main h2 {
+.main h1 {
     font-size: 32px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    color: #50c6db;
+    text-align: center;
+}
+.main h2 {
+    font-size: 24px;
     margin-bottom: 1rem;
     color: #50c6db;
     text-align: center;
@@ -246,7 +260,7 @@ p {
     align-items: center;
     width: 100%;
     background-color: white;
-    padding: 40px;
+    padding: 30px;
 
 }
 
@@ -272,7 +286,7 @@ p {
 }
 
 
-/* icons */
+/* features font awesome icons */
 .icon {
     width: 15vw;
     display: flex;
@@ -367,6 +381,8 @@ border: 2px solid rgb(219, 239, 238); */
 
 .related-posts {
     background-color: #d5c9e2;
+    border-top: 3px solid #693f7e;
+    border-bottom: 3px solid #693f7e;
     grid-column: 3 / 4;
     grid-row: 5 / 6;
     padding: 2rem;

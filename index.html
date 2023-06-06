@@ -27,7 +27,10 @@
     <!--   facebook plugin script   -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0"
-        nonce="w1QCGjct"></script>
+        nonce="w1QCGjct">
+        </script>
+
+
     <div class="container">
         <div class="header">
             <p class="logo"><a href="#"> <img id="header-img" alt="logo" max-height="80px"
@@ -35,7 +38,7 @@
             <nav>
                 <ul>
                     <li><a href="#features">Features</a></li>
-                    <li><a href="#">Options</a></li>
+                    <li><a href="#options">Options</a></li>
                     <li><a href="#order">Order</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -43,43 +46,44 @@
             <a href="https://www.facebook.com/profile.php?id=100091246779442"><img src="assets/img/QR Code.jpg"
                     alt="Facebook QR Code" height="80px" padding="10px"></a>
         </div>
-<!-- 
-<div class="parent"> -->
-        <div class="hero">
 
 
-            <div id="hero">
-                <form name="contactform" form action="https://getform.io/f/9b3c7089-7d68-4e83-b0bb-af39bb23f7b1"
-                    method="POST">
-                    <p id="us">Contact Us: </p>
-                    <div id="order">
-                        <input type="name" name="" placeholder="Your Name" required>
-                        <input type="tel" name="" placeholder="Your Phone Number" required>
-                        <input type="email" name="" placeholder="Your Email" required>
-                        <br>
-                    </div>
+
+
+
+        <div id="hero">
+
+            <form name="contactform" form action="https://getform.io/f/d48e4eb7-edfd-4085-91e0-b4091e03f25f"
+                method="POST">
+                <p id="us">Contact Us: </p>
+                <div id="order">
+                    <input type="name" name="" placeholder="Your Name" required>
+                    <input type="tel" name="" placeholder="Your Phone Number" required>
+                    <input type="email" name="" placeholder="Your Email" required>
                     <br>
-                    <p id="interested">I'm Interested In:</p>
-                    <div id="contactus">
-                        <span><input type="checkbox" name="opt1"> <label for="opt1">2-piece set</label></span><br>
-                        <span><input type="checkbox" name="opt2"> <label for="opt2"> t-shirt</label></span><br>
-                        <span><input type="checkbox" name="opt3"> <label for="opt3">long sleeve </label></span><br>
-                        <span><input type="checkbox" name="opt4"> <label for="opt4">sweatshirt</label></span><br>
-                        <span><input type="checkbox" name="opt5"> <label for="opt5">hoodie</label></span><br>
-                    </div>
-                </form>
+                </div>
+                <br>
+                <p id="interested">I'm Interested In:</p>
+                <div id="contactus">
+                    <span><input type="checkbox" name="opt1"> <label for="opt1">2-piece set</label></span><br>
+                    <span><input type="checkbox" name="opt2"> <label for="opt2"> t-shirt</label></span><br>
+                    <span><input type="checkbox" name="opt3"> <label for="opt3">long sleeve </label></span><br>
+                    <span><input type="checkbox" name="opt4"> <label for="opt4">sweatshirt</label></span><br>
+                    <span><input type="checkbox" name="opt5"> <label for="opt5">hoodie</label></span><br>
 
+                    <span><input type="checkbox" name="opt7"> <label for="opt7">other: <span><input type="text"
+                                    name="opt7a" id="opt7a" class="textbox" placeholder="Tell Us More"></label>
+                    </span>
+                    <br>
+                    <!-- add hidden Honeypot input to prevent spams -->
+                    <input type="hidden" name="_gotcha" style="display:none !important">
+                </div>
+                <button type="submit">Submit</button>
+                <br>
+            </form>
+            <br>
 
-                <span><input type="checkbox" name="opt7"> <label for="opt7">other: <span><input type="text" name="opt7a"
-                                id="opt7a" class="textbox" placeholder="Tell Us More"></span></label></span><br>
-            </div>
-            <button type="submit">Submit</button>
-
-
-
-
-
-
+            </section>
         </div>
 
 
@@ -88,7 +92,8 @@
 
 
 
-        <!--   side bar   -->
+
+        <!--   SIDE BAR   -->
         <aside class="sidebar">
 
             <div class="facebook-container">
@@ -110,13 +115,15 @@
             <ul>
                 <li><a href="https://www.facebook.com/groups/617690660186718/permalink/654499179839199/">Walnut
                         Hills</a></li>
-                <li><a href="https://www.facebook.com/groups/617690660186718/permalink/652183703404080/">Matching mom &
+                <li><a href="https://www.facebook.com/groups/617690660186718/permalink/652183703404080/">Matching
+                        mom &
                         daughter set</a></li>
                 <li><a href="https://www.facebook.com/groups/617690660186718/permalink/639929214629529/">Grad Family
                         T-shirt set</a></li>
                 <li><a href="https://www.facebook.com/groups/617690660186718/permalink/652405126715271/">Senior
                         Outfits</a></li>
-                <li><a href="https://www.facebook.com/groups/617690660186718/permalink/630271862261931/">Senior sweater
+                <li><a href="https://www.facebook.com/groups/617690660186718/permalink/630271862261931/">Senior
+                        sweater
                         & Family support shirts</a></li>
             </ul>
         </aside>
@@ -125,21 +132,24 @@
 
 
 
-        <!--   main body   -->
+        <!--   MAIN BODY   -->
         <div class="main">
-            <!--     <img src="#"> -->
-            <h2>Custom Couture for Grads:</h2>
+
+            <h1>Custom Couture for Grads:</h1>
             <div class="video-container container">
                 <div class="row justify-content-center">
                     <div class="col ml-5">
                         <iframe id="video" src="assets/GotIt_AprilSale.mp4" width="400" height="800px"></iframe>
+                        <!--     <img src="#">  if switching from video to image -->
                     </div>
                 </div>
             </div>
 
 
 
-            <h2>Express Yourself and Embrace Your Success with a Personalized Outfit</h2>
+            <h1>Express Yourself and Embrace Your Success with a Personalized Outfit</h1>
+
+            <!--   features section   -->
             <div class="grid" id="features">
                 <div class="grid-item">
                     <div class="icon">
@@ -147,7 +157,7 @@
                     </div>
                     <div class="text">
                         <h2>Handcrafted</h2>
-                        <p>Each item is meticulously designed & made according to each client's specific order.</p>
+                        <p>Each item is meticulously designed & made specific to each client.</p>
                     </div>
                 </div>
 
@@ -167,7 +177,7 @@
                     </div>
                     <div class="text">
                         <h2>High quality</h2>
-                        <p>Exquisite Craftsmanship and Uncompromising Quality with Every Detail.
+                        <p>Exquisite Craftsmanship in every detail.
                         </p>
                     </div>
                 </div>
@@ -205,10 +215,8 @@
 
 
 
-
+        <!--   related images   -->
         <div class="related-images">
-
-
 
             <div class="icon"><img src="assets/img/vivyl_solid3_edited3x4.jpg"></div>
 
@@ -222,18 +230,18 @@
 
             <div class="icon"><img src="assets/img/preK_grad_2piece_edited.jpg"></div>
 
-
-
         </div>
 
 
 
-
+        <!--   related post    -->
         <div class="related-posts" id="options">
             <h4>Ordering Info:</h4>
 
             <h5>please include the following with your order information </h5>
+
             <br>
+            <!--   unordered list - also use for links to external pages once a full webpage? couldn't decide on layout   -->
             <ul>
                 <li><a href="#">color & size for top</a></li>
                 <br>
@@ -253,10 +261,6 @@
                 <li><a href="#">(please note the top & bottom are from different manufacturers. Exact color matching
                         isn't always possible. I will do my best to match as closely as possible.)</a></li>
                 <br>
-
-
-
-
             </ul>
 
         </div>
@@ -264,9 +268,8 @@
 
 
 
-
+        <!--   FOOTER  -->
         <footer>
-
 
             <h3>Got It! Customized by KayKay</h3>
             <div class="contact-card" id="contact">
@@ -295,7 +298,101 @@
                     Moore</a>2023-2024 &nbsp;&nbsp;&nbsp; All rights reserved.</p>
         </footer>
     </div>
-</div>
+    </div>
 </body>
 
 </html>
+
+
+
+
+<!--    FORM INFO - FROM FATAL ERROR PROJECT - getgorm.io  -->
+
+<!--
+    <section id="order">
+        <form name="contactform" form action="https://getform.io/f/d48e4eb7-edfd-4085-91e0-b4091e03f25f" method="POST">
+            <p id="us">Contact Us: </p>
+            <div id="customer-info">
+                <input type="name" name="" placeholder="Your Name" required>
+                <input type="tel" name="" placeholder="Your Phone Number" required>
+                <input type="email" name="" placeholder="Your Email" required>
+                <br>
+            </div>
+            <br>
+            <p id="interested">I'm Interested In:</p>
+            <div id="contactus">
+                <span><input type="checkbox" name="opt1"> <label for="opt1">2-piece set</label></span><br>
+                <span><input type="checkbox" name="opt2"> <label for="opt2"> t-shirt</label></span><br>
+                <span><input type="checkbox" name="opt3"> <label for="opt3">long sleeve </label></span><br>
+                <span><input type="checkbox" name="opt4"> <label for="opt4">sweatshirt</label></span><br>
+                <span><input type="checkbox" name="opt5"> <label for="opt5">hoodie</label></span><br>
+
+                <span><input type="checkbox" name="opt7"> <label for="opt7">other: <span><input type="text" name="opt7a"
+                                id="opt7a" class="textbox" placeholder="Tell Us More"></label>
+                </span>
+                <br>
+
+                <input type="hidden" name="_gotcha" style="display:none !important">
+            </div>
+            <button type="submit">Submit</button>
+            <br>
+        </form>
+        <br>
+    </section>
+-->
+
+
+
+
+
+<!--    RAW FORM INFO -  getgorm.io  -->
+
+
+<!--        input text box -   -->
+<!--
+<form action="https://getform.io/f/d48e4eb7-edfd-4085-91e0-b4091e03f25f" method="POST">
+    <p id="us">Contact Us: </p>
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <input type="text" name="message">
+-->
+
+
+
+    <!-- add hidden Honeypot input to prevent spams -->
+    <!--
+    <input type="hidden" name="_gotcha" style="display:none !important">
+    -->
+
+
+
+    <!-- checkbox handle -->
+    <!--
+    <input type="checkbox" name="subscribe" value="yes" checked>
+    <input type="hidden" name="subscribe" value="no">
+    -->
+
+
+
+    <!-- radio button handle -->
+    <!--
+    <input type="radio" name="gender" value="male" checked>
+    <input type="radio" name="gender" value="female">
+    <input type="radio" name="gender" value="other">
+    -->
+
+
+
+    <!-- select field handle -->
+    <!--
+    <select name="work-experience">
+        <option value="one-year">0-1 years</option>
+        <option value="one-five-years">1-5 years</option>
+    </select>
+    <button type="submit">Send</button>
+</form>
+
+-->
+
+
+
