@@ -519,6 +519,8 @@ footer p {
     margin-right: 0.5rem;
 }   */
 
+
+
 /* Responsive styles */
 @media (max-width: 768px) {
     .contact-grid {
@@ -560,6 +562,23 @@ footer p {
         background-color: white;
         align-items: center !important;
     }
+
+nav{
+    margin-bottom: 1050px;
+    margin-left: -50px;
+    font-size:8px;
+}
+
+.logo {
+    width: 25%;
+    margin-left: 5%;
+    margin-bottom: 700px !important;
+   
+}
+
+#facebook-qr{
+display: none;
+}
 
     footer {
         align-items: center !important;
