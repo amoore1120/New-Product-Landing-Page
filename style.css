@@ -12,47 +12,8 @@ font-family: 'Ubuntu', sans-serif;
 font-family: 'Ysabeau', sans-serif;
 */
 
-/*  ***     font sizes      ***
 
-***   REM   ***     1 rem = 16px    0.5rem = 8px    ***
-Rem (short for “root-em”) units dictate an element's font size relative to the size of the root element. By default, most browsers use a font size value of 16px. So, if the root element is 16px, an element with the value 1rem will also equal 16px.
-
-***   EM   ***      1em font size is equal to the current font size     ***
-For example, if the font size of the body text is 16px, then 1em is also 16px. Ems are a scalable unit, meaning that they will change size in proportion to the font size. So, if the font size is increased to 24px, then 1em will also be 24px.
-Ems are a useful unit for setting font sizes because they are responsive. This means that they will automatically adjust to the user's preferred font size settings. This is in contrast to other units, such as pixels, which will always be the same size regardless of the user's font size settings.
-Ems can also be used to set other properties, such as margins and paddings. 
-For example, the following CSS rule will set the margin of the body text to 1em:
-
-body {
-  margin: 1em;
-} 
-
-This will set the margin of the body text to the same size as the font size.
-Ems are a versatile unit that can be used to set a variety of properties. They are a good choice for setting font sizes because they are responsive and scalable.
-
-***     EM  -VS-    REM     ***
-Rem and em are both relative units of length in CSS. They are both scalable, meaning that they will change size in proportion to the parent element. However, there is a key difference between the two units: rem is relative to the root element, while em is relative to the parent element. For example, if the font size of the root element is 16px, then 1rem will also be 16px. However, if the font size of the parent element is 24px, then 1em will be 24px.
-
-    In general: 
-    - rem is a good choice for setting font sizes, because it will ensure that the font size is responsive to the user's preferences. 
-    - Em is a good choice for setting other properties, such as margins and paddings, because it allows you to set the size of the property relative to the parent element.
-
- ***     EM    -VS-    REM    -VS-    PX     ***  
-em
-A multiple of the font-size of the element it is used on. For example, if the font-size of a container is 2rem, then 1em is 32px inside the container.
-
-rem
-A multiple of the root font-size of your browser. For example, if the root-font size is 16px, then 1rem is 16px.
-
-px
-A fixed-size unit used for small elements like borders or shadows.
-
-em and rem
-Scalable units that meet web accessibility standards. They are better than px because they scale better and meet web accessibility standards.
-
-px
-An absolute measurement that hardcodes the font-size for all users. The user can't change the value.
-
+/*
 Here are some general guidelines for using em, rem, and px:
     - Use px for small, fixed-size elements like borders or shadows.
     - Use em for typography and other scalable elements that need to change size relative to their parent element.
@@ -106,8 +67,8 @@ p {
     /*    should min-width be set for responsiveness ex: 300px  */
     margin: 0 auto;
     /*  centers the container horizontally, left & right margins to auto, the top & bottom margins to 0 */
-    padding: 0 60px;
-    /*  sets the padding of container: 0px top & bottom, 60 px left & right. Padding creates the space between the content &border for body background color & design (2 side columns  */
+    padding: 0 3.75rem;
+    /*  sets the padding of container: 0px top & bottom, 60 px left & right. Padding creates the space between the content & side border  */
     display: grid;
     grid-template-columns: 0.4fr 0.3fr 0.3fr;
     /* defines the columns of the grid: 0.4fr, 0.3fr, and 0.3fr = fraction of the available space each column should occupy. In this case, the first column will take 40% of the available space, and the second and third columns will each take 30% of the available space. */
@@ -127,14 +88,27 @@ p {
     grid-row: 1 / 2;
     color: #9f9c9c;
     text-transform: uppercase;
-    border-bottom: 2px solid #b0e0ea;
+    border-bottom: 2px solid rgb(219, 239, 238);
     /* aqua border line -  horizontal line below the header  */
-    padding: 20px 0;
+    padding: .5rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+
 }
 
+
+.header.scrolled {
+    background-color: #693f7e;
+    color: #fff;
+}
 
 /* header nav links */
 .header nav ul {
@@ -168,10 +142,10 @@ p {
     /* 5px / 16px = 0.3125rem */
 }
 
-
-
-
-
+#facebook-qr {
+    width: 10%;
+    margin-left: 5%;
+}
 
 
 /* HERO - CONTACT / ORDER */
@@ -191,19 +165,6 @@ p {
     min-height: 18.75rem;
     /* 300px / 16px = 18.75rem */
 }
-
-/* old
-#hero {
-    font-size: 16px;
-    line-height: 25px;
-    margin-bottom: 10px;
-    padding: 20px;
-    color: rgb(112, 128, 144);
-    grid-column: 1 / 2;
-    grid-row-start: 2 / 3;
-    background-color: rgb(252, 216, 226);
-    min-height: 300px;
-}*/
 
 
 button {
@@ -424,7 +385,7 @@ button {
     display: flex;
     flex-wrap: wrap;
 
-    justify-content: space-between;
+    justify-content: center;
     align-content: center;
     align-items: center;
 }
@@ -488,6 +449,8 @@ border: 2px solid rgb(219, 239, 238); */
 
 .related-images .icon {
     flex: 1 1 150px;
+    max-height: 279.9px;
+    min-width: 150px;   
 }
 
 .related-images .icon img {
@@ -500,7 +463,7 @@ border: 2px solid rgb(219, 239, 238); */
     border-bottom: 3px solid #693f7e;
     grid-column: 3 / 4;
     grid-row: 5 / 6;
-    padding: 2rem;
+    padding: .5rem;
     margin-left: 1rem;
 }
 
@@ -524,40 +487,37 @@ footer {
     grid-row: 6 / 7;
     color: #fff;
     text-align: center;
-    padding: 2rem 0;
+
     background-color: #50c6db;
-    line-height: 2.5rem;
+    line-height: 2rem;
 }
 
+footer h3{
+    margin-top: 1rem;
+}
 footer h2 {
     color: rgb(233, 73, 128);
-    padding: 1rem;
+    padding: .5rem;
 }
-
 footer p {
     color: #434344;
     font-size: 0.75rem;
-    padding: 1rem;
+    padding: .5rem;
 }
-
 
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: .5rem;
-
-
-
-    padding: 2rem;
     margin-left: auto;
     margin-right: auto;
+    padding: .5rem;
 }
 
 
-
+/*
 .contact-item i {
     margin-right: 0.5rem;
-}
+}   */
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -583,7 +543,7 @@ footer p {
 }
 
 .footer-nav li {
-    margin: 0 0.5rem;
+    margin: 0 1rem;
 }
 
 
@@ -599,7 +559,6 @@ footer p {
     body {
         background-color: white;
         align-items: center !important;
-
     }
 
     footer {
@@ -607,15 +566,11 @@ footer p {
     }
 
     #video {
-
         display: none;
     }
 
     .video-container {
-
         margin-bottom: 1rem;
-
-
         align-items: center;
     }
 
@@ -646,7 +601,7 @@ footer p {
 
 
 
-/*      max-width: medium screens for tablets, ipads, etc ipad mini = 768px - 1024  = ew 2 columns   */
+/*      max-width: medium screens for tablets, ipads, etc ipad mini = 768px??? not sure how to set it up  = ew 2 columns   */
 
 @media (max-width: 768px) {
     .grid-container {
@@ -668,10 +623,3 @@ footer p {
         /* Place it above the sidebar */
     }
 }
-
-
-
-
-
-/*      max-width: full screen for macbooks - full size   */
-/*  a commonly used media query breakpoint for laptops and larger screens is around 1280 pixels or higher   */

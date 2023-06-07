@@ -11,14 +11,15 @@
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
     <!-- Font awesome icon library  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Anton&family=Tsukimi+Rounded:wght@300;400;500;600;700&family=Ubuntu:ital,wght@0,300;1,300&family=Ysabeau:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
+   <script src="script.js"></script>
 
 </head>
 
@@ -36,7 +37,7 @@
 
         <!--   header - currently not sticky or floating. stays at top of the page, doesn't scroll   -->
         <div class="header" id="header">
-            <p class="logo"><a href="#"> <img id="header-img" alt="Got It! logo" max-height="80px"
+            <p class="logo"><a href="#"> <img id="header-img" alt="Got It! logo" max-height="16rem"
                         src="assets/img/logo2.jpg"></a></p>
             <nav>
                 <ul>
@@ -46,8 +47,11 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <a href="https://www.facebook.com/profile.php?id=100091246779442"><img src="assets/img/QR Code.jpg"
-                    alt="Facebook QR Code" height="80px" padding="10px"></a>
+
+            <a href="https://www.facebook.com/profile.php?id=100091246779442" id="facebook-qr">
+                <img src="assets/img/QR Code.jpg" alt="Facebook QR Code" height="80px" padding="10px">
+            </a>
+
         </div>
 
 
@@ -299,7 +303,7 @@
             <h3>Got It! Customized by KayKay</h3>
 
             <div class="footer-grid">
-                <h2>Contact KayKay:</h2>
+                <h2>Contact: </h2>
                 <div class="contact-grid" id="contact">
 
                     <!--   contact :    phone    -->
@@ -350,10 +354,10 @@
 
             <!--    COPYRIGHT INFO  - owner of company + info on webpage design  -->
             <!--   made names hyperlinks - drive traffic to main site & promote webpage designer    -->
-            <p>Copyright &copy;<a href="https://www.facebook.com/profile.php?id=100091246779442" target="_blank">KayKay
+            <p>Copyright 2023-2024 &copy;<a href="https://www.facebook.com/profile.php?id=100091246779442" target="_blank">KayKay
                     McGlone</a>&nbsp;&nbsp;&nbsp; Website Design &copy;<a
                     href="https://amoore1120.github.io/New_personalPortfolio_bootstrap/" target="_blank">Amanda
-                    Moore</a>2023-2024 &nbsp;&nbsp;&nbsp; All rights reserved.</p>
+                    Moore</a> &nbsp;&nbsp;&nbsp; All rights reserved.</p>
 
         </footer> <!--   /  END OF FOOTER    -->
 
@@ -367,7 +371,6 @@
 
 
 <!--    FORM INFO - FROM FATAL ERROR PROJECT - getgorm.io  -->
-
 <!--
     <section id="order">
         <form name="contactform" form action="https://getform.io/f/d48e4eb7-edfd-4085-91e0-b4091e03f25f" method="POST">
@@ -399,52 +402,4 @@
         </form>
         <br>
     </section>
--->
-
-
-
-
-
-<!--    RAW FORM  -  getgorm.io  -->
-
-<!--        input text box -   -->
-<!--
-<form action="https://getform.io/f/d48e4eb7-edfd-4085-91e0-b4091e03f25f" method="POST">
-    <p id="us">Contact Us: </p>
-    <input type="text" name="name">
-    <input type="email" name="email">
-    <input type="text" name="message">
--->
-
-
-<!-- add hidden Honeypot input to prevent spams -->
-<!--
-    <input type="hidden" name="_gotcha" style="display:none !important">
-    -->
-
-
-<!-- checkbox handle -->
-<!--
-    <input type="checkbox" name="subscribe" value="yes" checked>
-    <input type="hidden" name="subscribe" value="no">
-    -->
-
-
-<!-- radio button handle -->
-<!--
-    <input type="radio" name="gender" value="male" checked>
-    <input type="radio" name="gender" value="female">
-    <input type="radio" name="gender" value="other">
-    -->
-
-
-<!-- select field handle -->
-<!--
-    <select name="work-experience">
-        <option value="one-year">0-1 years</option>
-        <option value="one-five-years">1-5 years</option>
-    </select>
-    <button type="submit">Send</button>
-</form>
-
 -->
